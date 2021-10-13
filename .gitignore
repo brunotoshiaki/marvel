@@ -14,3 +14,4 @@ HELP.md
 .project
 .factorypath
 .classpath
+src/main/resources/key.bc
