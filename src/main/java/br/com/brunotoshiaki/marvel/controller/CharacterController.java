@@ -21,7 +21,7 @@ public class CharacterController {
     @Operation(summary = "Find all Character")
     @GetMapping(value = "/v1/characters", produces = { "application/json", "application/xml" })
     public ResponseEntity<String> findAll() {
-        return ResponseEntity.ok().body(service.getCharacter());
+        return ResponseEntity.ok().body(service.getCharacters());
     }
 
 }

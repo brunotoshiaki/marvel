@@ -1,14 +1,10 @@
 package br.com.brunotoshiaki.marvel.utils;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.Optional;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
-import org.apache.commons.io.IOUtils;
-
+import br.com.brunotoshiaki.marvel.model.KeyTO;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,28 +13,19 @@ import lombok.extern.slf4j.Slf4j;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Utils {
 
-    private static Optional<String> readFile() {
-        try {
-            var classLoader = Utils.class.getClassLoader();
-            var file = new File(classLoader.getResource("key.bc").getFile());
-            var inputStream = new FileInputStream(file);
-            return Optional.of(IOUtils.toString(inputStream, StandardCharsets.UTF_8));
-        } catch (IOException ex) {
-            log.error(ex.getMessage());
-        }
-
-        return Optional.empty();
+    public static String readFile(String path) throws IOException {
+        return Files.readString(Paths.get(path));
     }
 
-    public static String getKey() throws FileNotFoundException {
-        var key = readFile();
+    public static KeyTO getKey() {
+        try {
+            var obj = readFile("src/main/resources/key.bc").split(";");
+            return new KeyTO(1, obj[0], obj[1]);
+        } catch (IOException e) {
 
-        if (key.isPresent()) {
-            return key.get();
-        } else {
-            throw new FileNotFoundException("Arquivo não encotrado");
+            log.error(e.getMessage());
         }
-
+        return new KeyTO();
     }
 
 }
