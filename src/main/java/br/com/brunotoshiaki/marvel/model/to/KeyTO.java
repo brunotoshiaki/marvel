@@ -1,4 +1,4 @@
-package br.com.brunotoshiaki.marvel.model;
+package br.com.brunotoshiaki.marvel.model.to;
 
 import java.io.Serializable;
 

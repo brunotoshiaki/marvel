@@ -29,7 +29,6 @@ public class CharacterServiceTest {
         String result = controller.restExecute("/v1/public/characters");
 
         assertEquals(json, result);
-
     }
 
 }

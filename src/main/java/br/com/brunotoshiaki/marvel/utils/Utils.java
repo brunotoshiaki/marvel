@@ -3,8 +3,8 @@ package br.com.brunotoshiaki.marvel.utils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
-import br.com.brunotoshiaki.marvel.model.KeyTO;
+import br.com.brunotoshiaki.marvel.model.to.KeyTO;
+import io.vertx.core.json.JsonObject;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,6 +26,14 @@ public class Utils {
             log.error(e.getMessage());
         }
         return new KeyTO();
+    }
+
+    public static JsonObject jsonFileToJsonObject(String path) throws IOException {
+        return new JsonObject(Files.readString(Paths.get(path)));
+    }
+
+    public static <R> R jsonFileToObject(String path, Class<R> clazz) throws IOException {
+        return jsonFileToJsonObject(path).mapTo(clazz);
     }
 
 }
