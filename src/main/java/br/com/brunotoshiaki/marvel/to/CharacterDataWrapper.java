@@ -1,4 +1,4 @@
-package br.com.brunotoshiaki.marvel.model.to;
+package br.com.brunotoshiaki.marvel.to;
 
 import java.io.Serializable;
 import lombok.Builder;

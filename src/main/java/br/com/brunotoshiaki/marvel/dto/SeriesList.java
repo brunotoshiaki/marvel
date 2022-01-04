@@ -1,17 +1,17 @@
-package br.com.brunotoshiaki.marvel.model.to;
+package br.com.brunotoshiaki.marvel.dto;
 
-import java.io.Serializable;
-import java.util.List;
 import lombok.Builder;
 import lombok.Data;
 
-@Data
+import java.io.Serializable;
+import java.util.List;
+
 @Builder
-public class ResourceList implements Serializable {
+@Data
+public class SeriesList implements Serializable {
     private static final long serialVersionUID = 1L;
     private int available;
     private int returned;
     private String collectionURI;
-    private List<Item> items;
-
+    private List<SeriesSummary> items;
 }

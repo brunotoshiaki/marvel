@@ -1,7 +1,9 @@
-package br.com.brunotoshiaki.marvel.model.to;
+package br.com.brunotoshiaki.marvel.to;
 
 import java.io.Serializable;
 import java.util.List;
+
+import br.com.brunotoshiaki.marvel.model.Character;
 import lombok.Builder;
 import lombok.Data;
 

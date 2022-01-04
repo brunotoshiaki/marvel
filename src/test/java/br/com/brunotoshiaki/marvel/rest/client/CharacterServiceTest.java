@@ -18,7 +18,7 @@ public class CharacterServiceTest {
     @Test
     public void getCharactersTest() throws InterruptedException, IOException {
 
-        var json = Utils.readFile("src/test/resources/characters.json");
+        var json = Utils.readFile("src/test/resources/resourceCharacters.json");
 
         MockResponse mockResponse = new MockResponse()
                 .addHeader("Content-Type", "application/json; charset=utf-8")
