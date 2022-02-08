@@ -3,7 +3,7 @@ package br.com.brunotoshiaki.marvel.utils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import br.com.brunotoshiaki.marvel.to.KeyTO;
+import br.com.brunotoshiaki.marvel.model.dto.KeyTO;
 import io.vertx.core.json.JsonObject;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

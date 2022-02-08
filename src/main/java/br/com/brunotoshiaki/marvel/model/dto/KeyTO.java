@@ -1,7 +1,7 @@
-package br.com.brunotoshiaki.marvel.to;
+package br.com.brunotoshiaki.marvel.model.dto;
 
+import java.io.Serial;
 import java.io.Serializable;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,10 +10,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class KeyTO implements Serializable {
-    private static final long serialVersionUID = 1L;
-
-    private int ts;
-    private String apikey;
-    private String hash;
-
+  @Serial private static final long serialVersionUID = 1L;
+  private int ts;
+  private String apikey;
+  private String hash;
 }

@@ -1,12 +1,6 @@
 package br.com.brunotoshiaki.marvel.model.mock;
 
-
-
 import lombok.Data;
 
 @Data
-public class ItemMocker {
-
-
-
-}
+public class ItemMocker {}

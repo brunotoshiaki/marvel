@@ -1,5 +1,6 @@
-package br.com.brunotoshiaki.marvel.dto;
+package br.com.brunotoshiaki.marvel.model.dto;
 
+import java.io.Serial;
 import lombok.Builder;
 import lombok.Data;
 
@@ -9,6 +10,7 @@ import java.util.List;
 @Builder
 @Data
 public class SeriesList implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
     private int available;
     private int returned;
