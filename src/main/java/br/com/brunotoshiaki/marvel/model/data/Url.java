@@ -1,4 +1,4 @@
-package br.com.brunotoshiaki.marvel.model.dto;
+package br.com.brunotoshiaki.marvel.model.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serial;

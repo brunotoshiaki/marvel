@@ -1,7 +1,7 @@
 package br.com.brunotoshiaki.marvel.model.mock;
 
 
-import br.com.brunotoshiaki.marvel.model.dto.CharacterDataContainer;
+import br.com.brunotoshiaki.marvel.model.data.CharacterDataContainer;
 import lombok.Data;
 
 import java.util.ArrayList;

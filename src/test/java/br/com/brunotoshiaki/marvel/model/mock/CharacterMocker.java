@@ -1,6 +1,6 @@
 package br.com.brunotoshiaki.marvel.model.mock;
 
-import br.com.brunotoshiaki.marvel.model.dto.Character;
+import br.com.brunotoshiaki.marvel.model.data.Character;
 
 public class CharacterMocker {
 

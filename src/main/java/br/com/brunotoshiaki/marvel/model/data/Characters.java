@@ -1,8 +1,5 @@
 package br.com.brunotoshiaki.marvel.model.data;
 
-import br.com.brunotoshiaki.marvel.model.dto.Image;
-import br.com.brunotoshiaki.marvel.model.dto.ResourceList;
-import br.com.brunotoshiaki.marvel.model.dto.Url;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 

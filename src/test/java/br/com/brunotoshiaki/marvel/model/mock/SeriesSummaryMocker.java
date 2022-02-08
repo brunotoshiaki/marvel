@@ -1,6 +1,6 @@
 package br.com.brunotoshiaki.marvel.model.mock;
 
-import br.com.brunotoshiaki.marvel.model.dto.SeriesSummary;
+import br.com.brunotoshiaki.marvel.model.data.SeriesSummary;
 import java.util.ArrayList;
 import java.util.List;
 

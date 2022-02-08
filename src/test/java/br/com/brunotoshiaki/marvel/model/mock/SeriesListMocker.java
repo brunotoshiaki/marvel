@@ -1,6 +1,6 @@
 package br.com.brunotoshiaki.marvel.model.mock;
 
-import br.com.brunotoshiaki.marvel.model.dto.SeriesList;
+import br.com.brunotoshiaki.marvel.model.data.SeriesList;
 
 public class SeriesListMocker {
 

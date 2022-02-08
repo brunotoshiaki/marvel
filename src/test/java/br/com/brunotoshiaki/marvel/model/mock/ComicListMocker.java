@@ -1,8 +1,6 @@
 package br.com.brunotoshiaki.marvel.model.mock;
 
-import br.com.brunotoshiaki.marvel.model.dto.ComicList;
-import java.util.ArrayList;
-import java.util.List;
+import br.com.brunotoshiaki.marvel.model.data.ComicList;
 
 public class ComicListMocker {
 

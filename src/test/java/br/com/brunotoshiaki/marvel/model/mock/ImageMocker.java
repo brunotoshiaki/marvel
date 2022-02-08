@@ -1,6 +1,6 @@
 package br.com.brunotoshiaki.marvel.model.mock;
 
-import br.com.brunotoshiaki.marvel.model.dto.Image;
+import br.com.brunotoshiaki.marvel.model.data.Image;
 import lombok.Data;
 
 @Data

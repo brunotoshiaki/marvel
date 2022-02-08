@@ -1,6 +1,6 @@
 package br.com.brunotoshiaki.marvel.model.mock;
 
-import br.com.brunotoshiaki.marvel.model.dto.EventList;
+import br.com.brunotoshiaki.marvel.model.data.EventList;
 
 public class EventListMocker {
 

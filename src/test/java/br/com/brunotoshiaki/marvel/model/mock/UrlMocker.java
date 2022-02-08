@@ -1,6 +1,6 @@
 package br.com.brunotoshiaki.marvel.model.mock;
 
-import br.com.brunotoshiaki.marvel.model.dto.Url;
+import br.com.brunotoshiaki.marvel.model.data.Url;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.Data;

@@ -1,6 +1,6 @@
 package br.com.brunotoshiaki.marvel.model.mock;
 
-import br.com.brunotoshiaki.marvel.model.dto.StoryList;
+import br.com.brunotoshiaki.marvel.model.data.StoryList;
 
 public class StoryListMocker {
 
