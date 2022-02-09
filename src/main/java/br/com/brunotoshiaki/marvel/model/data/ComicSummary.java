@@ -11,8 +11,8 @@ import lombok.Data;
 @AllArgsConstructor
 public class ComicSummary implements Serializable {
 
-  @Serial private static final long serialVersionUID = 1L;
-
+  @Serial
+  private static final long serialVersionUID = 1L;
   private String resourceURI;
   private String name;
 }

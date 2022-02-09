@@ -1,12 +1,15 @@
 package br.com.brunotoshiaki.marvel.model.data;
 
-import lombok.*;
-import org.springframework.data.annotation.Id;
-
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.springframework.data.annotation.Id;
 
 @AllArgsConstructor
 @Builder
@@ -15,8 +18,10 @@ import java.util.Objects;
 @NoArgsConstructor
 public class Characters implements Serializable {
 
-  @Serial private static final long serialVersionUID = 1L;
-  @Id private String uId;
+  @Serial
+  private static final long serialVersionUID = 1L;
+  @Id
+  private String uId;
   private int id;
   private String name;
   private String description;

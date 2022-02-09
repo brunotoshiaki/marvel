@@ -8,8 +8,9 @@ import lombok.Data;
 @Data
 @Builder
 public class CharacterDataWrapper implements Serializable {
-    @Serial
-    private static final long serialVersionUID = 1L;
-    private CharacterDataContainer data;
+
+  @Serial
+  private static final long serialVersionUID = 1L;
+  private CharacterDataContainer data;
 
 }
