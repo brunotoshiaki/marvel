@@ -4,8 +4,9 @@ package br.com.brunotoshiaki.marvel.utils;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+import br.com.brunotoshiaki.marvel.model.data.CharacterDataWrapper;
+import br.com.brunotoshiaki.marvel.model.mock.CharacterDataWrapperMocker;
 import io.vertx.core.json.JsonObject;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import org.junit.Test;
@@ -21,9 +22,10 @@ public class UtilTest {
       var result = Utils.jsonFileToJsonObject(FILE);
       var expected = new JsonObject(Files.readString(Paths.get(FILE)));
       assertEquals(expected, result);
-    } catch (IOException e) {
-      fail(e.getMessage());
+    } catch (Exception e) {
       e.printStackTrace();
+      fail(e.getMessage());
+
     }
 
   }
@@ -33,8 +35,25 @@ public class UtilTest {
     try {
       var result = Utils.readFile("src/test/resources/teste.txt");
       assertEquals("teste", result.trim());
-    } catch (IOException e) {
+    } catch (Exception e) {
       e.printStackTrace();
+      fail(e.getMessage());
+    }
+  }
+
+  @Test
+  public void jsonFileToObjectTest() {
+    try {
+      var jsonObject = Utils.jsonFileToJsonObject(FILE);
+      var characterDataWrapper = Utils.toObject(jsonObject, CharacterDataWrapper.class);
+      var mockcharacterDataWrapper = CharacterDataWrapperMocker.mockCharacterDataWrapper();
+      assertEquals(mockcharacterDataWrapper.getCode(), characterDataWrapper.getCode());
+      assertEquals(1, characterDataWrapper.getData().getResults().size());
+
+    } catch (Exception e) {
+      fail(e.getMessage());
+      e.printStackTrace();
+
     }
   }
 

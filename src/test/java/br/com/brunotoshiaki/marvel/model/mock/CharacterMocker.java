@@ -1,10 +1,12 @@
 package br.com.brunotoshiaki.marvel.model.mock;
 
 import br.com.brunotoshiaki.marvel.model.data.Character;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CharacterMocker {
 
-  public static Character mockCharacter() {
+  private static Character mockCharacter() {
     return Character.
         builder()
         .id(1011334)
@@ -19,5 +21,9 @@ public class CharacterMocker {
         .events(EventListMocker.mockEventListMocker())
         .series(SeriesListMocker.mockerSeriesList())
         .build();
+  }
+
+  public static List<Character> mockCharacters() {
+    return new ArrayList<>(List.of(mockCharacter()));
   }
 }

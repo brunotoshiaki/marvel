@@ -6,16 +6,14 @@ import java.util.List;
 import java.util.Objects;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
 @AllArgsConstructor
-@Builder
-@Getter
-@Setter
 @NoArgsConstructor
+@Builder
+@Data
 public class Characters implements Serializable {
 
   @Serial
